@@ -29,7 +29,7 @@ class Dog(commands.Cog):
             if ctx.voice_client is not None:
                 return await ctx.voice_client.move_to(voice_channel)
             await voice_channel.connect()
-            source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio('bark2.wav'))
+            source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio('chomby_audio/bark2.wav'))
             ctx.voice_client.play(source)
 
             while ctx.voice_client.is_playing():
@@ -44,7 +44,7 @@ class Dog(commands.Cog):
 
 
     @commands.command(help="Call Chomby over")
-    async def chomby(self, ctx, *, query='bark2.wav'):
+    async def chomby(self, ctx, *, query='chomby_audio/bark2.wav'):
         source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio(query))
         ctx.voice_client.play(source)
 
@@ -56,7 +56,7 @@ class Dog(commands.Cog):
 
 
     @commands.command(help="Give Chomby a snack")
-    async def feed(self, ctx, *, query='feeding.mp3'):
+    async def feed(self, ctx, *, query='chomby_audio/feeding.mp3'):
         source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio(query))
         ctx.voice_client.play(source)
 
@@ -67,7 +67,7 @@ class Dog(commands.Cog):
         await ctx.voice_client.disconnect()
 
     @commands.command(help="Someone just rang the doorbell..")
-    async def dingdong(self, ctx, *, query='dingdong.mp3'):
+    async def dingdong(self, ctx, *, query='chomby_audio/dingdong.mp3'):
 
         source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio(query))
         ctx.voice_client.play(source)
@@ -79,7 +79,7 @@ class Dog(commands.Cog):
         await ctx.voice_client.disconnect()
     
     @commands.command()
-    async def baddog(self, ctx, *, query='whine.wav'):
+    async def baddog(self, ctx, *, query='chomby_audio/whine.wav'):
         """Sad Chomby"""
 
         source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio(query))
