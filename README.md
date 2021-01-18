@@ -7,6 +7,10 @@ A virtual pet for your Discord server.
 Add Chomby to your Discord server today by:
 1) STEPS TO INVITE CHOMBY TO YOUR DISCORD.
 
+Commands Chomby is trained to respond to:
+
+
+
 Help develop Chomby with the following commands to get started:
 1) STEPS TO INIT A LOCAL DEV ENV TO HELP CONTRIBUTE TO THE PROJECT.
 
