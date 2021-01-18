@@ -1,8 +1,9 @@
-FROM       python
-RUN        pip install pipenv
-COPY       . /src
+FROM       python:3.8-slim
+RUN        set -eux; \
+           apt-get update
+RUN        apt-get install ffmpeg -y
+COPY       /src /src
+RUN        pip install -r /src/requirements.txt
 WORKDIR    /src
-RUN        pipenv install --deploy --dev
 ENV        SHELL=/bin/bash
-ENTRYPOINT ["pipenv", "run"]
-CMD        ["python"]
+ENTRYPOINT ["python", "main.py"]

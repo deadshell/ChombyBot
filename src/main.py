@@ -4,7 +4,6 @@ import asyncio
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
 
 class Dog(commands.Cog):
     def __init__(self, bot):
