@@ -1,3 +1,5 @@
 .env
 .vscode/
 ffmpeg.exe
+Pipfile
+Pipfile.lock
