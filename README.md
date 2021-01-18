@@ -8,7 +8,19 @@ Add Chomby to your Discord server today by:
 1) STEPS TO INVITE CHOMBY TO YOUR DISCORD.
 
 Commands Chomby is trained to respond to:
+  baddog   Sad Chomby
+  chomby   Call Chomby over
+  dingdong Someone just rang the doorbell..
+  feed     Give Chomby a snack
+  find     
+  shoo     Shoo Chomby away
+  sic      @ a user to sic Chomby on them
+  whistle  Call Chomby
+​No Category:
+  help     Shows this message
 
+Type ..help command for more info on a command.
+You can also type ..help category for more info on a category.
 
 
 Help develop Chomby with the following commands to get started:
