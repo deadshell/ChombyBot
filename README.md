@@ -17,8 +17,6 @@ whistle  Call Chomby
 Type ..help command for more info on a command.
 You can also type ..help category for more info on a category.
 ```
----
-
 ###### Add Chomby to your Discord server today by:
 1) STEPS TO INVITE CHOMBY TO YOUR DISCORD.
 
