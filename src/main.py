@@ -104,7 +104,7 @@ class Dog(commands.Cog):
     @whistle.before_invoke
     @chomby.before_invoke
     @feed.before_invoke
-    @sleep.before_invoke
+    @snore.before_invoke
     @dingdong.before_invoke
     @baddog.before_invoke
     async def ensure_voice(self, ctx):
