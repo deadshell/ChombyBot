@@ -1,9 +1,7 @@
+import os
+import asyncio
 import discord
 from discord.ext import commands
-import asyncio
-import os
-from dotenv import load_dotenv
-
 
 class Dog(commands.Cog):
     def __init__(self, bot):
@@ -17,7 +15,7 @@ class Dog(commands.Cog):
         for user in users:
             for u in user.members:
                 print(u.name)
-    
+
     @commands.command()
     async def sic(self, ctx, member: discord.Member):
         """ @ a user to sic Chomby on them"""
@@ -33,14 +31,11 @@ class Dog(commands.Cog):
 
             while ctx.voice_client.is_playing():
                 await asyncio.sleep(1)
-            
+
             ctx.voice_client.stop()
             await ctx.voice_client.disconnect()
         except:
             await ctx.send("User not in a voice channel")
-        
-
-
 
     @commands.command(help="Call Chomby over")
     async def chomby(self, ctx, *, query='chomby_audio/bark2.wav'):
@@ -52,7 +47,6 @@ class Dog(commands.Cog):
         
         ctx.voice_client.stop()
         await ctx.voice_client.disconnect()
-
 
     @commands.command(help="Give Chomby a snack")
     async def feed(self, ctx, *, query='chomby_audio/feeding.mp3'):
@@ -67,7 +61,6 @@ class Dog(commands.Cog):
 
     @commands.command(help="Someone just rang the doorbell..")
     async def dingdong(self, ctx, *, query='chomby_audio/dingdong.mp3'):
-
         source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio(query))
         ctx.voice_client.play(source)
 
@@ -80,7 +73,6 @@ class Dog(commands.Cog):
     @commands.command()
     async def baddog(self, ctx, *, query='chomby_audio/whine.wav'):
         """Sad Chomby"""
-
         source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio(query))
         ctx.voice_client.play(source)
 
