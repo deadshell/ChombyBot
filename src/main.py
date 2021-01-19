@@ -59,6 +59,17 @@ class Dog(commands.Cog):
         ctx.voice_client.stop()
         await ctx.voice_client.disconnect()
 
+    @commands.command(help="Chomby is sleeping soundly")
+    async def snore(self, ctx, *, query='chomby_audio/snore.mp3'):
+        source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio(query))
+        ctx.voice_client.play(source)
+
+        while ctx.voice_client.is_playing():
+            await asyncio.sleep(1)
+
+        ctx.voice_client.stop()
+        await ctx.voice_client.disconnect()
+
     @commands.command(help="Someone just rang the doorbell..")
     async def dingdong(self, ctx, *, query='chomby_audio/dingdong.mp3'):
         source = discord.PCMVolumeTransformer(discord.FFmpegPCMAudio(query))
@@ -93,6 +104,7 @@ class Dog(commands.Cog):
     @whistle.before_invoke
     @chomby.before_invoke
     @feed.before_invoke
+    @sleep.before_invoke
     @dingdong.before_invoke
     @baddog.before_invoke
     async def ensure_voice(self, ctx):
