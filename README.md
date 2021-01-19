@@ -1,3 +1,4 @@
+![Python package](https://github.com/GridLAN/ChombyBot/workflows/Python%20package/badge.svg)
 # ChombyBot
 A virtual pet for your Discord server..
 
